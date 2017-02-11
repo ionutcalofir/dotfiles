@@ -1,0 +1,4 @@
+-f .tags
+--recurse=yes
+--excmd=number
+--sort=no
