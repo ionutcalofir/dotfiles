@@ -1,3 +1,9 @@
+# Enables colorschemes for vim and avoid problems with tmux.
+[[ $COLORTERM = gnome-terminal && ! $TERM = screen-256color ]] && TERM=xterm-256color
+
+# Automatically start a tmux session upon logging in.
+ZSH_TMUX_AUTOSTART="true"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -51,7 +57,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode)
+plugins=(git vi-mode tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -86,6 +92,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Hides "user@hostname" info
 DEFAULT_USER="calo"
-
-# Enables colorschemes for vim and avoid problems with tmux
-[[ $COLORTERM = gnome-terminal && ! $TERM = screen-256color ]] && TERM=xterm-256color
