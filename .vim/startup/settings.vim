@@ -1,3 +1,6 @@
+" Tabs to spaces and indentation
+filetype plugin indent on
+
 " The semicolon allows vim to search .tags recursively from the current
 " up to the parent and so on
 set tags=./.tags;

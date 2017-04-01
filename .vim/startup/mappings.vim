@@ -15,3 +15,8 @@ cmap <left> <Nop>
 cmap <down> <Nop>
 cmap <up> <Nop>
 cmap <right> <Nop>
+
+" Treat long lines as break lines (useful when moving around in them)
+map j gj
+map k gk
+

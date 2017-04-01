@@ -10,19 +10,42 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" Theme for vim
 Plugin 'chriskempson/vim-tomorrow-theme'
+
+" Provides automatic closing of quotes, parenthesis, brackets, etc.
 Plugin 'Raimondi/delimitMate'
+
+" Autocomplete
 Plugin 'Valloric/YouCompleteMe'
+
+" When combined with a set of tmux key bindings, the plugin will allow you to
+" navigate seamlessly between vim and tmux splits using a consistent set of hotkeys.
 Plugin 'christoomey/vim-tmux-navigator'
+
+" Fuzzy finder
 Plugin 'ctrlpvim/ctrlp.vim'
+
+" Filetree
 Plugin 'scrooloose/nerdtree'
+
+" Commenter
 Plugin 'scrooloose/nerdcommenter'
+
+" Nice tabline at the bottom and a theme for it
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
+" Tabline for tmux
 Plugin 'edkolev/tmuxline.vim'
+
+" Git
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+
+" Shows the list of buffers in the command bar
 Plugin 'bling/vim-bufferline'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -54,9 +77,6 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
-" Tabs to spaces and indentation
-filetype plugin indent on
 
 " Load custom settings for plugins
 source ~/.vim/startup/netrw.vim
