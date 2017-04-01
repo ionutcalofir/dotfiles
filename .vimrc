@@ -16,7 +16,7 @@ Plugin 'chriskempson/vim-tomorrow-theme'
 " Provides automatic closing of quotes, parenthesis, brackets, etc.
 Plugin 'Raimondi/delimitMate'
 
-" Autodetect indentantion rules
+" Autodetects indentantion rules
 Plugin 'tpope/vim-sleuth'
 
 " Autocomplete

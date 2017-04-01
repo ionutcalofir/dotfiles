@@ -1,3 +1,9 @@
+"
+let mapleader = "\<Space>"
+
+" Quick save
+nnoremap <Leader>w :w<CR>
+
 " Unmap the arrow keys
 map <left> <Nop>
 map <down> <Nop>
