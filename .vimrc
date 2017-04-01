@@ -18,6 +18,7 @@ Plugin 'Raimondi/delimitMate'
 
 " Autocomplete
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
 
 " When combined with a set of tmux key bindings, the plugin will allow you to
 " navigate seamlessly between vim and tmux splits using a consistent set of hotkeys.
