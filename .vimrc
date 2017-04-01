@@ -82,13 +82,14 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" Load custom settings
+source ~/.vim/startup/mappings.vim
+source ~/.vim/startup/settings.vim
+source ~/.vim/startup/color.vim
+
 " Load custom settings for plugins
 source ~/.vim/startup/netrw.vim
 source ~/.vim/startup/ycm.vim
 source ~/.vim/startup/delimitMate.vim
 source ~/.vim/startup/airline.vim
-
-" Load custom settings
-source ~/.vim/startup/settings.vim
-source ~/.vim/startup/color.vim
-source ~/.vim/startup/mappings.vim
+source ~/.vim/startup/nerdTree.vim
