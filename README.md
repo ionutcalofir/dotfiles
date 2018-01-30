@@ -2,6 +2,6 @@
 
 ### Installation
 ```sh
-# cd path/to/repository
+$ cd path/to/repository
 $ sh update_files.sh
 ```

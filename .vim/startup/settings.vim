@@ -19,3 +19,6 @@ set lcs=eol:¬,trail:·,tab:»·
 " Adds a 80-column indicator
 set colorcolumn=81
 highlight colorcolumn ctermbg=grey
+
+" Make the backspace to work like in most other programs
+set backspace=indent,eol,start
