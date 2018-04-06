@@ -27,6 +27,10 @@ function install_packages() {
     sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60 | tee -a logger.log
     sudo update-alternatives --config vim | tee -a logger.log
 
+    # other packages
+    sudo apt-get install build-essential cmake | tee -a logger.log
+    sudo apt-get install clang | tee -a logger.log
+
     echo "Done installing packages!" | tee -a logger.log
 }
 
