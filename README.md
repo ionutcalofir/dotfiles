@@ -3,5 +3,5 @@
 ### Installation
 ```sh
 $ cd path/to/repository
-$ sh update_files.sh
+$ bash ./setup.sh
 ```
