@@ -30,6 +30,7 @@ function install_packages() {
     # other packages
     sudo apt-get install build-essential cmake | tee -a logger.log
     sudo apt-get install clang | tee -a logger.log
+    sudo apt-get install fonts-powerline | tee -a logger.log
 
     echo "Done installing packages!" | tee -a logger.log
 }
