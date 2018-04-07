@@ -23,3 +23,23 @@ set lcs=eol:¬,trail:·,tab:»·
 
 " Make the backspace to work like in most other programs
 set backspace=indent,eol,start
+
+" Adds a 80-column indicator
+set colorcolumn=81
+highlight colorcolumn ctermbg=0
+
+" Use mouse support
+set mouse=a
+
+" Turn on the WiLd menu
+set wildmenu
+set wildmode=list:longest,full
+
+" Highlight search results
+set hlsearch
+
+" Makes search starts as you type
+set incsearch
+
+" Highlight current line
+set cursorline
