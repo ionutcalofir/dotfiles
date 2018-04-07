@@ -11,3 +11,6 @@ source "$HOME/zshrc/prompt.zsh"
 source "$HOME/zshrc/python.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# added by Anaconda3 installer
+export PATH="/home/calo/anaconda3/bin:$PATH"
