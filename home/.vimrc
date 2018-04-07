@@ -15,6 +15,9 @@ Plug 'altercation/vim-colors-solarized' " fancy color scheme
 " Filetree
 Plug 'scrooloose/nerdtree'
 
+" Commenter
+Plug 'scrooloose/nerdcommenter'
+
 " Autocomplete
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
@@ -35,6 +38,9 @@ Plug 'christoomey/vim-tmux-navigator'
 " Nice tabline at the bottom and a theme for it
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" Tabline for tmux
+Plug 'edkolev/tmuxline.vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
