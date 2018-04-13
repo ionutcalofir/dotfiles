@@ -37,6 +37,14 @@ function install_packages() {
 
 function make_symlinks() {
     echo "Making symlinks..." | tee -a logger.log
+    rm -rf ~/.vimrc
+    rm -rf ~/.zshrc
+    rm -rf ~/.tmux.conf
+    rm -rf ~/.ctags
+    rm -rf ~/.vim
+    rm -rf ~/zshrc
+    rm -rf ~/.config/nvim/init.vim
+
     ln -sf "$HOME/Repositories/dotfiles/home/.vimrc" "$HOME/.vimrc" | tee -a logger.log
     ln -sf "$HOME/Repositories/dotfiles/home/.zshrc" "$HOME/.zshrc" | tee -a logger.log
     ln -sf "$HOME/Repositories/dotfiles/home/.tmux.conf" "$HOME/.tmux.conf" | tee -a logger.log
