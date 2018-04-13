@@ -72,6 +72,7 @@ function install_plugins() {
         rm -rf ~/.tmux/plugins/tpm
     fi
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm | tee -a logger.log
+    tmux source ~/.tmux.conf
     ~/.tmux/plugins/tpm/bin/update_plugins all
 
     # Plug allows post-update hooks
