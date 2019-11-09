@@ -2,3 +2,4 @@
 --recurse=yes
 --excmd=number
 --sort=yes
+--python-kinds=-i

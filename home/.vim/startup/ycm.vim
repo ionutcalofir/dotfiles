@@ -1,5 +1,5 @@
 " Enables autocomplete for python
-let g:ycm_python_binary_path = '/usr/bin/python3'
+let g:ycm_python_binary_path = 'python3'
 
 " Disables the preview window of ycm
 set completeopt-=preview

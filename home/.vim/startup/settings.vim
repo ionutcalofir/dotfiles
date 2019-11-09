@@ -43,3 +43,6 @@ set incsearch
 
 " Highlight current line
 set cursorline
+
+" Block cursor
+set guicursor=i-n-v-c:block-Cursor
