@@ -27,7 +27,7 @@ sudo chsh -s $(which zsh)
 
 ln -sf "$HOME/Documents/Repositories/dotfiles/home/.vim" "$HOME/.vim"
 ln -sf "$HOME/Documents/Repositories/dotfiles/home/.vimrc" "$HOME/.vimrc"
-# YCM trebuie instalat separat dupa (momentan este comentat in .vimrc)
+# YCM trebuie comentat!
 
 mkdir ~/.config/nvim
 ln -sf "$HOME/Documents/Repositories/dotfiles/home/.config/nvim/init.vim" "$HOME/.config/nvim/init.vim"
@@ -42,3 +42,7 @@ ln -sf "$HOME/Documents/Repositories/dotfiles/home/.ctags" "$HOME/.ctags"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/bin/update_plugins all
 tmux source ~/.tmux.conf
+
+# Decomenteaza YCM si instaleaza-l
+# Dupa ce il instalezi o sa primesti o eroare cu YcmServer
+# ruleaza python3 install.py --clang-completer sa il instalezi cu python3
