@@ -31,7 +31,6 @@ ln -sf "$HOME/Documents/Repositories/dotfiles/home/.vimrc" "$HOME/.vimrc"
 
 mkdir ~/.config/nvim
 ln -sf "$HOME/Documents/Repositories/dotfiles/home/.config/nvim/init.vim" "$HOME/.config/nvim/init.vim"
-vim +PlugClean! +qall
 vim +PlugInstall! +qall
 sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
 sudo update-alternatives --config vim
