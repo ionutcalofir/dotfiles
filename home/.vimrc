@@ -68,6 +68,10 @@ call plug#end()
 
 " Load custom settings
 let b:match_words = '\<if\>:\<elif\>:\<else\>,' " matchit configuration
+
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+
 source ~/.vim/startup/settings.vim
 source ~/.vim/startup/mappings.vim
 
