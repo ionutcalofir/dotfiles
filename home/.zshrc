@@ -30,6 +30,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-# Bazel
-export PATH="$PATH:$HOME/bin"
