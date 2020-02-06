@@ -9,43 +9,57 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" Theme for vim
-Plug 'altercation/vim-colors-solarized' " fancy color scheme
 
-" Filetree
-Plug 'scrooloose/nerdtree'
+" Plugins
+" ------------------------------------------------------------------------------
 
-" Commenter
-Plug 'scrooloose/nerdcommenter'
+" Fancy color scheme
+Plug 'altercation/vim-colors-solarized'
 
-" Autocomplete
-Plug 'Valloric/YouCompleteMe'
-"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+" Tip 12 from Practical VIM
+Plug 'tpope/vim-commentary'
 
-" Fuzzy finder
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+" Tip 51 from Practical VIM.
+Plug 'kana/vim-textobj-user'
 
-" Provides automatic closing of quotes, parenthesis, brackets, etc.
-Plug 'Raimondi/delimitMate'
+" Tip 12 from Practical VIM
+Plug 'kana/vim-textobj-entire'
+
+" Tip 36 from Practical VIM
+Plug 'tpope/vim-unimpaired'
+
+" Tip 36 from Practical VIM
+Plug 'tpope/vim-surround'
+
+" Tip 84 from Practical VIM
+Plug 'kana/vim-textobj-lastpat'
+
+" Tip 86 from Practical VIM
+Plug 'nelstrom/vim-visual-star-search'
+
+" Tip 109 from Practical VIM
+Plug 'mileszs/ack.vim'
+
+" Navigate between VIM and tmux
+Plug 'christoomey/vim-tmux-navigator'
+
+" Closes brackets
+Plug 'rstacruz/vim-closer'
 
 " Indentation guide line
 Plug 'nathanaelkane/vim-indent-guides'
-
-" When combined with a set of tmux key bindings, the plugin will allow you to
-" navigate seamlessly between vim and tmux splits using a consistent set of hotkeys.
-Plug 'christoomey/vim-tmux-navigator'
 
 " Nice tabline at the bottom and a theme for it
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Tabline for tmux
-Plug 'edkolev/tmuxline.vim'
-
 " Git
-Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+
+set packpath+=/usr/share/vim/vim80/ " matchit path
+packadd! matchit " Tip 54 from Practical VIM
+
+" ------------------------------------------------------------------------------
 
 call plug#end()
 
@@ -53,13 +67,10 @@ call plug#end()
 " ========== General ==========
 
 " Load custom settings
+let b:match_words = '\<if\>:\<elif\>:\<else\>,' " matchit configuration
 source ~/.vim/startup/settings.vim
 source ~/.vim/startup/mappings.vim
 
 " Load custom settings for plugins
-source ~/.vim/startup/nerdTree.vim
-source ~/.vim/startup/ycm.vim
-source ~/.vim/startup/fzf.vim
-source ~/.vim/startup/delimitMate.vim
 source ~/.vim/startup/indentGuides.vim
 source ~/.vim/startup/airline.vim
