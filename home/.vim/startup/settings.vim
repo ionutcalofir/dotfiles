@@ -25,7 +25,7 @@ set lcs=eol:¬,trail:·,tab:»·
 set backspace=indent,eol,start
 
 " Adds a 80-column indicator
-set colorcolumn=81
+set colorcolumn=80
 highlight colorcolumn ctermbg=0
 
 " Use mouse support

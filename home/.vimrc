@@ -59,6 +59,8 @@ Plug 'airblade/vim-gitgutter'
 set packpath+=/usr/share/vim/vim80/ " matchit path
 packadd! matchit " Tip 54 from Practical VIM
 
+Plug 'neovim/nvim-lsp'
+
 " ------------------------------------------------------------------------------
 
 call plug#end()
@@ -78,3 +80,22 @@ source ~/.vim/startup/mappings.vim
 " Load custom settings for plugins
 source ~/.vim/startup/indentGuides.vim
 source ~/.vim/startup/airline.vim
+
+:lua << EOF
+require'nvim_lsp'.pyls.setup{}
+require'nvim_lsp'.clangd.setup{}
+EOF
+
+nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
+nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
+
+set completeopt-=preview
+autocmd Filetype python,c,cpp setl omnifunc=v:lua.vim.lsp.omnifunc
+
+set grepprg=ack\ --nogroup\ --column\ $*
+set grepformat=%f:%l:%c:%m
