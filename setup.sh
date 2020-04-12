@@ -51,3 +51,6 @@ Open tmux and run: tmux source ~/.tmux.conf
 // LSP
 sudo pip3 install jedi
 pip install 'python-language-server[all]'
+
+sudo apt-get install clangd-9
+sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100
