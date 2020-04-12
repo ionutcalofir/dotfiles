@@ -49,4 +49,5 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 Open tmux and run: tmux source ~/.tmux.conf
 
 // LSP
-pip install python-language-server
+sudo pip3 install jedi
+pip install 'python-language-server[all]'
