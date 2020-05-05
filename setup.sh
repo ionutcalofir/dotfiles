@@ -54,3 +54,8 @@ pip install 'python-language-server[all]'
 
 sudo apt-get install clangd-9
 sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100
+
+// FZF
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+cd ~/.fzf
+./install
