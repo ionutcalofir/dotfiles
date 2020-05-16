@@ -22,6 +22,9 @@ sudo apt install python3-dev python3-pip
 sudo pip3 install neovim
 sudo pip3 install --upgrade pynvim
 
+sudo apt-get install ack-grep
+sudo ln -s /usr/bin/ack-grep /usr/local/bin/ack
+
 ln -sf "$HOME/Documents/Repositories/dotfiles/home/.tmux.conf" "$HOME/.tmux.conf"
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

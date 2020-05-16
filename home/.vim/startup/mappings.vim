@@ -22,3 +22,5 @@ map <Leader>bl :ls<CR>
 " Treats long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
+
+map <F32> oimport ipdb; ipdb.set_trace()<ESC>:w<CR>
