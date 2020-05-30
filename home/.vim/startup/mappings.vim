@@ -24,3 +24,5 @@ map j gj
 map k gk
 
 map <F32> oimport ipdb; ipdb.set_trace()<ESC>:w<CR>
+map <F8> :!g++ -std=c++17 -Wshadow -Wall -o main % -O2 -Wno-unused-result<CR>
+map <F9> :!g++ -std=c++17 -Wshadow -Wall -o main % -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG<CR>

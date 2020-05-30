@@ -12,9 +12,9 @@ source "$HOME/zshrc/prompt.zsh"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 ## CUDA
-export CUDA_HOME=/usr/local/cuda-10.0
-export PATH=/usr/local/cuda-10.0/bin:/usr/local/cuda-10.0/NsightCompute-1.0${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export CUDA_HOME=/usr/local/cuda-10.1
+export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
