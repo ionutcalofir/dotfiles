@@ -56,6 +56,9 @@ Plug 'vim-airline/vim-airline-themes'
 " Git
 Plug 'airblade/vim-gitgutter'
 
+" Highlighting
+Plug 'nvim-treesitter/nvim-treesitter'
+
 set packpath+=/usr/share/vim/vim80/ " matchit path
 packadd! matchit " Tip 54 from Practical VIM
 
@@ -101,3 +104,11 @@ autocmd Filetype python,c,cpp setl omnifunc=v:lua.vim.lsp.omnifunc
 
 set grepprg=ack\ --nogroup\ --column\ $*
 set grepformat=%f:%l:%c:%m
+
+:lua << EOF
+require'nvim-treesitter.configs'.setup {
+    highlight = {
+      enable = true,
+    },
+}
+EOF
