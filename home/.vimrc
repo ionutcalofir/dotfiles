@@ -83,6 +83,7 @@ source ~/.vim/startup/mappings.vim
 " Load custom settings for plugins
 source ~/.vim/startup/indentGuides.vim
 source ~/.vim/startup/airline.vim
+source ~/.vim/startup/gitgutter.vim
 
 :lua << EOF
 require'nvim_lsp'.pyls.setup{}
