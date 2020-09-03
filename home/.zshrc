@@ -1,13 +1,14 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/ionutc/.oh-my-zsh
+DEFAULT_USER="ionutc"
+
+ZSH_THEME="agnoster"
 
 source $ZSH/oh-my-zsh.sh
-DEFAULT_USER="ionutc"
 
 source "$HOME/zshrc/configs.zsh"
 source "$HOME/zshrc/key-bindings.zsh"
 source "$HOME/zshrc/aliases.zsh"
-source "$HOME/zshrc/prompt.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
