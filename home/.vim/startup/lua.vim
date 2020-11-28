@@ -40,3 +40,4 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     }
 )
 EOF
+nnoremap <leader>ds <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>

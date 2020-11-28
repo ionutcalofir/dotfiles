@@ -92,3 +92,5 @@ source ~/.vim/startup/lua.vim
 
 set grepprg=ack\ --nogroup\ --column\ $*
 set grepformat=%f:%l:%c:%m
+
+source ~/.vim/startup/filetype.vim

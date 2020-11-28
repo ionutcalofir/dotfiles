@@ -1,7 +1,4 @@
-" Tabs to spaces and indentation
-filetype plugin indent on
-
-" enable solarized theme
+" Enable solarized theme
 syntax enable
 set background=dark
 colorscheme solarized
