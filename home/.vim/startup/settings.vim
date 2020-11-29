@@ -18,9 +18,6 @@ set relativenumber
 set list
 set lcs=eol:¬,trail:·,tab:»·
 
-" Make the backspace to work like in most other programs
-set backspace=indent,eol,start
-
 " Adds a 80-column indicator
 set colorcolumn=80
 highlight colorcolumn ctermbg=0

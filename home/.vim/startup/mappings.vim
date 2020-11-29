@@ -4,7 +4,7 @@ let mapleader = "\<Space>"
 " Quick save
 nnoremap <Leader>w :w<CR>
 
-" Closes the current buffer without losing the split window
+" Closes the current buffer even if there is only one buffer
 map <Leader>bd :bp <BAR> bd #<CR>
 
 " Moves to the next buffer
