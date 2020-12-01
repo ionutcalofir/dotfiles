@@ -7,12 +7,6 @@ nnoremap <Leader>w :w<CR>
 " Closes the current buffer even if there is only one buffer
 map <Leader>bd :bp <BAR> bd #<CR>
 
-" Moves to the next buffer
-map <Leader>l :bn<CR>
-
-" Moves to the previous buffer
-map <Leader>h :bp<CR>
-
 " Opens a new empty buffer
 map <Leader>t :enew<CR>
 
