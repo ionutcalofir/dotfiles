@@ -57,7 +57,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 
 " Highlighting
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " :TSUpdate recommendetion from authors
 
 set packpath+=/usr/share/vim/vim80/ " matchit path
 packadd! matchit " Tip 54 from Practical VIM
