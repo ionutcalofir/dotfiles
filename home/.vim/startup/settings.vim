@@ -2,7 +2,7 @@
 set termguicolors
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme solarized8
 
 " The semicolon allows vim to search .tags recursively from the current
 " up to the parent and so on
