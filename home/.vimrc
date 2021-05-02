@@ -14,7 +14,7 @@ call plug#begin('~/.vim/plugged')
 " ------------------------------------------------------------------------------
 
 " Fancy color scheme
-Plug 'altercation/vim-colors-solarized'
+Plug 'ishan9299/nvim-solarized-lua'
 
 " Tip 12 from Practical VIM
 Plug 'tpope/vim-commentary'
