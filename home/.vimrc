@@ -62,7 +62,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " :TSUpdate recommen
 set packpath+=/usr/share/vim/vim80/ " matchit path
 packadd! matchit " Tip 54 from Practical VIM
 
-Plug 'neovim/nvim-lsp'
+Plug 'neovim/nvim-lspconfig'
 
 Plug 'nvim-lua/completion-nvim'
 
