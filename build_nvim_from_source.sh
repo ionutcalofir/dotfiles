@@ -12,4 +12,6 @@ sudo make install
 cd ~
 sudo rm -rf neovim
 
-# vim -c 'PlugUpdate | q | q'
+# Steps:
+# - nvim
+# - :PlugUpdate

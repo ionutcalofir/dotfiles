@@ -64,7 +64,9 @@ packadd! matchit " Tip 54 from Practical VIM
 
 Plug 'neovim/nvim-lspconfig'
 
-Plug 'nvim-lua/completion-nvim'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
 
 " ------------------------------------------------------------------------------
 

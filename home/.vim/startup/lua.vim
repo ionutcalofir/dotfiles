@@ -27,27 +27,37 @@ require'nvim-treesitter.configs'.setup {
 EOF
 " -----------------------------------------------------------------------------
 
-" Completion (completion-nvim)
+" Completion (nvim-cmp)
 " -----------------------------------------------------------------------------
 " Set completeopt to have a better completion experience
-set completeopt=menuone,noinsert,noselect
+set completeopt=menu,menuone,noselect
+
 :lua << EOF
-require'lspconfig'.pyls.setup{on_attach=require'completion'.on_attach}
-require'lspconfig'.clangd.setup{on_attach=require'completion'.on_attach}
+  -- Setup nvim-cmp.
+  local cmp = require'cmp'
+
+  cmp.setup({
+    mapping = {
+      ['<C-U>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-D>'] = cmp.mapping.scroll_docs(4),
+      ['<C-SPACE>'] = cmp.mapping.complete(),
+      ['<C-E>'] = cmp.mapping.close(),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }),
+      ['<TAB>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
+      ['<s-TAB>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' })
+    },
+    sources = {
+      { name = 'nvim_lsp' },
+
+      { name = 'buffer' },
+    }
+  })
+
+  -- Setup lspconfig.
+  require'lspconfig'.pylsp.setup {
+    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+  }
 EOF
-
-let g:completion_trigger_on_delete = 1
-
-" Use <Tab> and <S-Tab> to navigate through popup menu
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" Manually trigger completion
-imap <tab> <Plug>(completion_smart_tab)
-imap <s-tab> <Plug>(completion_smart_s_tab)
-
-" Avoid showing message extra message when using completion
-set shortmess+=c
 " -----------------------------------------------------------------------------
 
 " Diagnostic
