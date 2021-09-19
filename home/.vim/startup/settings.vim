@@ -41,3 +41,6 @@ set cursorline
 
 " Block cursor
 set guicursor=i-n-v-c:block-Cursor
+
+" Highlight on yank
+au TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, on_visual=true}
