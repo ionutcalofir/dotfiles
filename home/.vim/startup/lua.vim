@@ -44,11 +44,10 @@ set completeopt=menu,menuone,noselect
       ['<C-E>'] = cmp.mapping.close(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
       ['<TAB>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
-      ['<s-TAB>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' })
+      ['<s-TAB>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' })
     },
     sources = {
       { name = 'nvim_lsp' },
-
       { name = 'buffer' },
     }
   })
@@ -75,7 +74,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     }
 )
 EOF
-nnoremap <leader>ds <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
-nnoremap [d <cmd>lua vim.lsp.diagnostic.goto_prev()()<CR>
-nnoremap ]d <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <leader>ds <cmd>lua vim.diagnostic.open_float()<CR>
+nnoremap [d <cmd>lua vim.diagnostic.goto_prev()<CR>
+nnoremap ]d <cmd>lua vim.diagnostic.goto_next()<CR>
 " -----------------------------------------------------------------------------
