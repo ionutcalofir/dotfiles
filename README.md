@@ -3,4 +3,4 @@
 ### Installation
 Follow setup.sh
 
-#TODO: UPDATE dotfiles
+#TODO: BEGIN AGAIN!
