@@ -2,7 +2,8 @@
 export ZSH=/home/ionutc/.oh-my-zsh
 DEFAULT_USER="ionutc"
 
-ZSH_THEME="agnoster"
+ZSH_THEME="mh"
+plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
