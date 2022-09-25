@@ -62,3 +62,7 @@ sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 cd ~/.fzf
 ./install
+
+// neovim
+:PackerSync - packer
+:TSUpdate - treesitter
