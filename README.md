@@ -2,7 +2,3 @@
 
 ### Installation
 Follow setup.sh
-
------
-BEGIN AGAIN!
------
