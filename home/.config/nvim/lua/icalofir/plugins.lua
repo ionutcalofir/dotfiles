@@ -8,8 +8,17 @@ return require('packer').startup(function(use)
   -- Tip 12 from Practical VIM
   use 'tpope/vim-commentary'
 
+  -- Tip 36 from Practical VIM
+  use 'tpope/vim-unimpaired'
+
+  -- Tip 54 from Practical VIM
+  use 'tpope/vim-surround'
+
   -- Indentation guide line
   use 'nathanaelkane/vim-indent-guides'
+
+  -- Nice tabline at the bottom and a theme for it
+  use 'vim-airline/vim-airline'
 
   -- Nvim autocomplete
   use 'neovim/nvim-lspconfig'

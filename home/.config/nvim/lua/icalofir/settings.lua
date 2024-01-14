@@ -15,7 +15,6 @@ vim.opt.listchars = {eol = '¬', trail = '·', tab = '»·'}
 
 -- Adds a 80-column indicator
 vim.opt.colorcolumn = '81'
-vim.api.nvim_set_hl(0, 'ColorColumn', {ctermbg = 7})
 
 -- Use mouse support
 vim.opt.mouse = 'a'
