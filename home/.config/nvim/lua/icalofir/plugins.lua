@@ -1,31 +1,43 @@
-return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
+-- Plugins
+require("lazy").setup({
   -- Fancy color scheme
-  use 'morhetz/gruvbox'
+  "morhetz/gruvbox",
 
   -- Tip 12 from Practical VIM
-  use 'tpope/vim-commentary'
+  "tpope/vim-commentary",
 
   -- Tip 36 from Practical VIM
-  use 'tpope/vim-unimpaired'
+  "tpope/vim-unimpaired",
 
   -- Tip 54 from Practical VIM
-  use 'tpope/vim-surround'
+  "tpope/vim-surround",
 
   -- Indentation guide line
-  use 'nathanaelkane/vim-indent-guides'
+  "nathanaelkane/vim-indent-guides",
 
   -- Nice tabline at the bottom and a theme for it
-  use 'vim-airline/vim-airline'
+  "vim-airline/vim-airline",
 
   -- Nvim autocomplete
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/nvim-cmp'
+  "neovim/nvim-lspconfig",
+  "hrsh7th/cmp-nvim-lsp",
+  "hrsh7th/cmp-buffer",
+  "hrsh7th/nvim-cmp",
 
   -- Treesitter
-  use { 'nvim-treesitter/nvim-treesitter' }
-end)
+  "nvim-treesitter/nvim-treesitter",
+})
