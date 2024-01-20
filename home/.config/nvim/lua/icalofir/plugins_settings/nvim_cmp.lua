@@ -1,14 +1,15 @@
 -- Completion ('hrsh7th/nvim-cmp')
 -- -----------------------------------------------------------------------------
-
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
 
 local cmp = require'cmp'
-
 cmp.setup({
+  experimental = {
+    ghost_text = true
+  },
   window = {
     -- completion = cmp.config.window.bordered(),
-    -- documentation = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -22,6 +23,7 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'buffer' },
+    { name = 'nvim_lsp_signature_help' }
   })
 })
 -- -----------------------------------------------------------------------------
@@ -69,6 +71,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 -- Set up lspconfig.
 local lspconfig = require('lspconfig')
-lspconfig.pylsp.setup {}
-lspconfig.clangd.setup {}
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+lspconfig.pylsp.setup {
+  capabilities = capabilities,
+}
+lspconfig.clangd.setup {
+  capabilities = capabilities,
+}
 -- -----------------------------------------------------------------------------
